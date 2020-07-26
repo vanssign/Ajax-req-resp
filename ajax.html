@@ -7,6 +7,7 @@
 </head>
 <body>
     <button id="button">Get Text File</button>
+    <div id="display-text"></div>
 
 
 <script>
@@ -15,18 +16,28 @@
     function loadText(){
         //create XHR Request
         var xhr= new XMLHttpRequest();
-        //OPEN- type,url/file,sync
-        // console.log(xhr);
+        //Parameter forOPEN- type,url/file,async
+        //tradition way using xhr.onreadystatechange 
+        //readystate 0:req not init 1:server connection established 2:request recieved 3:processing request 4:req finished response ready
+       
         xhr.open("GET",'sample.txt',true);
-        xhr.onload = function(){
-            if (this.status==200){
-                console.log(this.responseText);
+        //readystate=1
+        xhr.onprogress=function(){
+            console.log('READYSTATE=',xhr.readyState);//readystate=3 used for gif loading 
+            }
+        xhr.onload = function(){//run when readystate=4
+            if (this.status==200){//when using xhr.onreadystatechange we check for readystate==4 and status==200 both
+                console.log(this.responseText);////HTTP Status:200 OK,403 Forbidden,404 Not Found
+                document.getElementById("display-text").innerHTML=this.responseText;
             };
-          
-
-        };
-        xhr.send();
+            };
+            xhr.onerror=function(){
+                console.log("ERROR:Somthing went wrong or you wrote incorrect code beach");
+            }
+        xhr.send();//Sends the XML HTTP Request
+        
     };
+   
 </script>
 </body>
 </html>
