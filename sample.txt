@@ -1,4 +1,3 @@
-<p>Lorem Ipsum its workings beach</p>
-<p>This is text on <bold>sample.txt file</bold></p>
-
-<p>If you don't believe check the networkk from developer option</p>
+Lorem Ipsum its workings beach
+This is text on sample.txt file
+If you don't believe check the networkk from developer

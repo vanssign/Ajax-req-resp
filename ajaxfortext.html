@@ -28,9 +28,13 @@
         xhr.onload = function(){//run when readystate=4
             if (this.status==200){//when using xhr.onreadystatechange we check for readystate==4 and status==200 both
                 console.log(this.responseText);////HTTP Status:200 OK,403 Forbidden,404 Not Found
-                document.getElementById("display-text").innerHTML=this.responseText;
+                document.getElementById("display-text").innerHTML=this.responseText;}
+                else if (this.status==404){
+                    document.getElementById("display-text").innerHTML="404:sample.txt file is missing"
+                }
+            
             };
-            };
+
             xhr.onerror=function(){
                 console.log("ERROR:Somthing went wrong or you wrote incorrect code beach");
             }
