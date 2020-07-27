@@ -1,10 +1,10 @@
 # Ajax-req-resp
->Repo contains ajax request and response basics
+Repo contains ajax request and response basics
 ##Languages
 -HTML
 -JS
 ##Techniques
 -AJAX
 ###Jump to 
--https://vanssign.github.io/Ajax-req-resp/ajaxfortext.html 
--https://vanssign.github.io/Ajax-req-resp/ajaxforjson.html
+-[Ajax for text](https://vanssign.github.io/Ajax-req-resp/ajaxfortext.html) 
+-[Ajax for JSON](https://vanssign.github.io/Ajax-req-resp/ajaxforjson.html)
